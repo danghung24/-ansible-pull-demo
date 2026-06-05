@@ -1,5 +1,5 @@
 ---
-- name: Tự động cài đặt và cấu hình Nginx (Đã sửa lỗi font)
+- name: Tự động cài đặt và cấu hình Nginx 
   hosts: localhost
   connection: local
   become: yes # Chạy với quyền root
@@ -16,7 +16,7 @@
         state: started
         enabled: yes
 
-    - name: Tạo trang web custom có hỗ trợ tiếng Việt (Fixed font)
+    - name: Tạo trang web custom 
       copy:
         dest: /var/www/html/index.html
         content: |
@@ -31,7 +31,7 @@
               </style>
           </head>
           <body>
-              <h1> Demo : Tự động hóa thành công 100%!</h1>
+              <h1> Demo : Tự động hóa thành công 100%(1)!</h1>
               <p>Trạng thái: Zero Configuration.</p>
           </body>
           </html>
